@@ -1,5 +1,14 @@
-const app = () =>{
-  return <h1>Hola mundo</h1>
-} 
+import TaskList from './Components/TaskList'
 
-export default app
+const App = () => {
+  <h1>Lista de tareas</h1>
+  return (
+    <>
+    <div> 
+      <TaskList/>
+    </div>
+    </>
+  )
+}
+
+export default App
