@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { tasks as data } from "../Data/info";
 
 const TaskList = () => {
-    
+
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const TaskList = () => {
 
   return (
     <div>
-      {data.map((task) => {
+      {tasks.map((task) => {
         return (
           <div key={task.id}>
             <h1>{task.title}</h1>
