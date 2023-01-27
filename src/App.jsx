@@ -1,7 +1,8 @@
 import TaskList from './Components/TaskList'
 import TaskForm from './Components/TaskForm'
 import { tasks as data } from './Data/info'
-import { useState,useEffect } from 'react' 
+import { useState,useEffect } from 'react'
+import {Greet} from "./Components/Grett" 
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
 
   return (
     <>
+      <Greet/>
       <TaskForm createTask={createTask}/>
       <TaskList tasks={tasks}/>
     </>
