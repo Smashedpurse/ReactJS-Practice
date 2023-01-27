@@ -1,10 +1,18 @@
-const TaskForm = () => {
+import { useState,useEffect } from "react"
+
+const TaskForm = ({createTask}) => {
+
+    const [title, setTitle] = useState("")
+
+    const handleSubmit=(e)=>{
+        e.preventDefault()
+        createTask(title)
+    }
+
   return (
-        <form action="">
-             <input type="text" placeholder="Escribe tu tarea" onChange={(e)=>{
-                console.log(e.target.value)
-             }}/>
-             <button>Envia tu tarea</button>
+        <form onSubmit={handleSubmit} >
+             <input type="text" placeholder="Escribe tu tarea" onChange={(e)=>{setTitle(e.target.value)}}/>
+             <button >Envia tu tarea</button>
         </form>
   )
 }

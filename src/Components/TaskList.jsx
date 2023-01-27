@@ -1,15 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { tasks as data } from "../Data/info";
-
-const TaskList = () => {
-
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    setTasks(data);
-  }, []);
-
-  if (tasks.length === 0) {
+const TaskList = ({tasks}) => {
+    if (tasks.length === 0) {
     return <h1>No hay tareas</h1>;
   }
 
